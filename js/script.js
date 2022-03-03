@@ -9,7 +9,7 @@
 // Day 4
 let song0 = {
   title: "Somewhere Only We Know",
-  image: "https://en.wikipedia.org/wiki/Somewhere_Only_We_Know#/media/File:Keane-SOWK.jpg",
+  image: "https://upload.wikimedia.org/wikipedia/en/e/e9/Keane-SOWK.jpg",
   artist: "Keane",
   length: 237,
   link: "https://www.youtube.com/watch?v=Oextk-If8HQ"
@@ -17,7 +17,7 @@ let song0 = {
 
 let song1 = {
   title: "Viva La Vida",
-  image: "https://en.wikipedia.org/wiki/Viva_la_Vida#/media/File:Coldplay_-_Viva_la_Vida.jpg",
+  image: "https://upload.wikimedia.org/wikipedia/en/8/84/Coldplay_-_Viva_la_Vida.jpg",
   artist: "Coldplay",
   length: 244,
   link: "https://www.youtube.com/watch?v=dvgZkm1xWPE"
@@ -68,9 +68,9 @@ function displaySongInfo() {
   playlist.forEach(function(obj) {
     $(".songs").append(`<p>${obj.title}</p>`);
     $(".artists").append(`<p>${obj.artist}</p>`);
-    $('.images').append(obj.image);
-    $('.links').append(obj.link);
-    $('.lengths').append(obj.length);
+    $('.images').append(`<img src="${obj.image}" alt="Album cover image" width="50" height="50">`);
+    $('.links').append(`<a href="${obj.link}">Listen</a>`);
+    $('.lengths').append(`<p>${obj.length}</p>`);
   });
 }
 
